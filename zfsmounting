@@ -1,0 +1,2 @@
+zpool export <pool> to unmount
+zpool import -d /dev/disk/by-id <pool> to mount
