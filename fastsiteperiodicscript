@@ -1,0 +1,40 @@
+Save it into a directory, like /usr/local/lib/scripts/, and ln -s /usr/local/etc/periodic/PERIOD/NUM.SCRIPTNAME /usr/local/lib/scripts/SCRIPTNAME
+
+
+
+#!/bin/sh
+
+# fastest_sites periodic script.  Copyright (2014) Daniel D. Duffield.
+# You are commanded by the copyright holder to abide by the terms of
+#  the BSD license in your operation, modification, and distribution
+#  of this shell script.  Script intended for the FreeBSD environment.
+
+CONFFILE=/usr/local/etc/fastest_sites.conf
+LOGFILE=/var/log/fastest_sites
+FSITESBIN=/usr/local/bin/fastest_sites
+
+( echo "EXECUTED: `/bin/date`" ; echo "" ) > ${LOGFILE}.log.live
+
+${FSITESBIN} > ${CONFFILE}.live 2>> ${LOGFILE}.log.live
+EXITSTAT=$?
+
+EXITSTR="`/bin/date` CODE: ${EXITSTAT}"
+GOODEXIT="COMPLETED:"
+ERREXIT="ERRORED:"
+
+if [ ${EXITSTAT} -eq 0 ] ; then
+  echo " *" ${GOODEXIT} ${EXITSTR} >> ${LOGFILE}
+  ( echo "" ; echo ${GOODEXIT} ${EXITSTR} ) >> ${LOGFILE}.log.live
+  [ -f ${CONFFILE} ] && /bin/cp -f ${CONFFILE} ${CONFFILE}.old > /dev/null 2> /dev/null
+  /bin/mv -f ${CONFFILE}.live ${CONFFILE} > /dev/null 2> /dev/null
+  [ -f ${LOGFILE}.log ] && ( [ -f ${LOGFILE}.log.old ] && ( echo "--------" ; echo "" ) >> ${LOGFILE}.log.old ; /bin/cat ${LOGFILE}.log >> ${LOGFILE}.log.old )
+  /bin/mv -f ${LOGFILE}.log.live ${LOGFILE}.log > /dev/null 2> /dev/null
+else
+  echo " !" ${ERREXIT} ${EXITSTR} >> ${LOGFILE}
+  ( echo "" ; echo "ERRORED: `/bin/date` CODE: ${EXITSTAT}" ) >> ${LOGFILE}.log.live
+  [ -f ${CONFFILE}.live ] && /bin/rm -f ${CONFFILE}.live > /dev/null 2> /dev/null
+  [ -f ${LOGFILE}.err ] && ( [ -f ${LOGFILE}.err.old ] && ( echo "--------" ; echo "" ) >> ${LOGFILE}.err.old ; /bin/cat ${LOGFILE}.err >> ${LOGFILE}.err.old )
+  /bin/mv -f ${LOGFILE}.log.live ${LOGFILE}.err > /dev/null 2> /dev/null
+fi
+
+exit ${EXITSTAT}
