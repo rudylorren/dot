@@ -282,7 +282,7 @@
       <action name="FocusToBottom"/>
       <action name="Unfocus"/>
     </keybind>
-    <keybind key="A-space">
+    <keybind key="A-m">
       <action name="ShowMenu">
         <menu>client-menu</menu>
       </action>
@@ -326,56 +326,144 @@
       <action name="ToggleFullscreen">
         </action>
     </keybind>
-<keybind key="W-y">
-    <action name="Unmaximize"/>
-    <action name="MoveResizeTo">
+    <keybind key="W-y">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
         <x>0</x>
         <y>0</y>
         <width>684</width>
         <height>380</height>
-    </action>
-</keybind>
-<keybind key="W-u">
-    <action name="Unmaximize"/>
-    <action name="MoveResizeTo">
+      </action>
+    </keybind>
+    <keybind key="W-u">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
         <x>-0</x>
         <y>0</y>
         <width>684</width>
         <height>380</height>
-    </action>
-</keybind>
-<keybind key="W-b">
-	<action name="Unmaximize"/>
-    <action name="MoveResizeTo">
+      </action>
+    </keybind>
+    <keybind key="W-b">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
         <x>0</x>
         <y>-0</y>
         <width>684</width>
         <height>380</height>
-    </action>
-</keybind>
-<keybind key="W-n">
-	<action name="Unmaximize"/>
-    <action name="MoveResizeTo">
+      </action>
+    </keybind>
+    <keybind key="W-n">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
         <x>-0</x>
         <y>-0</y>
         <width>684</width>
         <height>380</height>
-    </action>
-</keybind>
-<keybind key="W-m">
-	<action name="Unmaximize"/>
-    <action name="MoveResizeTo">
+      </action>
+    </keybind>
+    <keybind key="W-m">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
         <x>center</x>
         <y>center</y>
         <width>684</width>
         <height>380</height>
-    </action>
-</keybind>
+      </action>
+    </keybind>
     <keybind key="A-m">
       <action name="Move"/>
     </keybind>
     <keybind key="A-r">
       <action name="Resize"/>
+    </keybind>
+    <keybind key="W-l">
+      <action name="MoveRelative">
+        <x>10</x>
+        <y>0</y>
+      </action>
+    </keybind>
+    <keybind key="W-k">
+      <action name="MoveRelative">
+        <x>0</x>
+        <y>-10</y>
+      </action>
+    </keybind>
+    <keybind key="W-h">
+      <action name="MoveRelative">
+        <x>-10</x>
+        <y>0</y>
+      </action>
+    </keybind>
+    <keybind key="W-j">
+      <action name="MoveRelative">
+        <x>0</x>
+        <y>10</y>
+      </action>
+    </keybind>
+    <keybind key="W-S-l">
+      <action name="MoveRelative">
+        <x>25</x>
+        <y>0</y>
+      </action>
+    </keybind>
+    <keybind key="W-S-k">
+      <action name="MoveRelative">
+        <x>0</x>
+        <y>-25</y>
+      </action>
+    </keybind>
+    <keybind key="W-S-h">
+      <action name="MoveRelative">
+        <x>-25</x>
+        <y>0</y>
+      </action>
+    </keybind>
+    <keybind key="W-S-j">
+      <action name="MoveRelative">
+        <x>0</x>
+        <y>25</y>
+      </action>
+    </keybind>
+    <keybind key="W-C-j">
+      <action name="ResizeRelative">
+        <bottom>10</bottom>
+      </action>
+    </keybind>
+    <keybind key="W-C-k">
+      <action name="ResizeRelative">
+        <bottom>-10</bottom>
+      </action>
+    </keybind>
+    <keybind key="W-C-l">
+      <action name="ResizeRelative">
+        <right>10</right>
+      </action>
+    </keybind>
+    <keybind key="W-C-h">
+      <action name="ResizeRelative">
+        <right>-10</right>
+      </action>
+    </keybind>
+    <keybind key="W-C-S-j">
+      <action name="ResizeRelative">
+        <bottom>25</bottom>
+      </action>
+    </keybind>
+    <keybind key="W-C-S-k">
+      <action name="ResizeRelative">
+        <bottom>-25</bottom>
+      </action>
+    </keybind>
+    <keybind key="W-C-S-l">
+      <action name="ResizeRelative">
+        <right>25</right>
+      </action>
+    </keybind>
+    <keybind key="W-C-S-h">
+      <action name="ResizeRelative">
+        <right>-25</right>
+      </action>
     </keybind>
     <!-- Keybindings for window switching with the arrow keys -->
     <keybind key="W-S-Right">
@@ -435,9 +523,9 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>lxterminal</name>
+          <name>urxvt</name>
         </startupnotify>
-        <command>lxterminal --geometry=80x18</command>
+        <command>urxvt</command>
       </action>
     </keybind>
     <keybind key="W-s">
@@ -917,12 +1005,10 @@
   <!-- show the manage desktops section in the client-list-(combined-)menu -->
 </menu>
   <applications>
-    
-   
     <application name="*">
       <decor>no</decor>
     </application>
-  <!--
+    <!--
   # this is an example with comments through out. use these to make your
   # own rules, but without the comments of course.
   # you may use one or more of the name/class/role/title/type rules to specify
