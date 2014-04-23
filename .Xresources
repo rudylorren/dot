@@ -1,57 +1,43 @@
-Xft.dpi: 96
-Xft.antialias: true
-Xft.hinting: true
-Xft.rgba: rgb
-Xft.autohint: false
-Xft.hintstyle: hintslight
-Xft.lcdfilter: lcddefault
+URxvt*depth: 32
+URxvt*buffered: on
+URxvt*geometry: 75x20
+URxvt*font: -*-tamsyn-medium-*-*-*-15-*-*-*-*-*-*-*
+URxvt*boldItalicFont: -*-tamsyn-medium-*-*-*-15-*-*-*-*-*-*-*
+URxvt*scrollBar: False
+URxvt*saveLines: 1000
+URxvt*pointerBlank: True
 
-URxvt*geometry: 80x22
-URxvt.perl-ext: default,url-select
+URxvt*colorn: #76844A
+URxvt*perl-ext: default,url-select
 URxvt.keysym.M-u: perl:url-select:select_next
 URxvt.url-select.launcher: /usr/bin/firefox -new-tab
 URxvt.url-select.underline: true
 
-URxvt*scrollBar: false
-URxvt*mouseWheelScrollPage: true
-
-
-URxvt*buffered: yes
-URxvt*letterSpace              : -1
-URxvt*font: xft:Fira Mono OT:size=8
-URxvt*boldItalicFont: xft:Fira Mono OT:size=8
-
-URxvt*background: #090909
-URxvt*foreground: #A9A9A9
-
-URxvt*colorn: #938B5D
-URxvt*colorBD: #B0B0B0
-URxvt*colorIT: #B0B0B0
-URxvt*colorUL: #455C38
+*background: #090909
+*foreground: #969696
 
 ! Black (not tango) + DarkGrey
-*color0:  #060606
-*color8:  #555753
+*color0:  #030303
+*color8:  #2d2d2d
 ! DarkRed + Red
-*color1:  #741C1C
-*color9:  #4F0B0B
+*color1:  #6f2522
+*color9:  #9e2c26
 ! DarkGreen + Green
-*color2:  #394E22
-*color10: #243018
+*color2:  #3c472b
+*color10: #597630
 ! DarkYellow + Yellow
-*color3:  #5C4415
-*color11: #A4832D
+*color3:  #62542b
+*color11: #b79326
 ! DarkBlue + Blue
-*color4:  #2B365C
-*color12: #1A2137
+*color4:  #2f3146
+*color12: #454975
 ! DarkMagenta + Magenta
-*color5:  #4C2D55
-*color13: #341C3C
-!DarkCyan + Cyan
-*color6:  #214364
-*color14: #202E3B
+*color5:  #352646
+*color13: #5e4679
+!DarkCyan + Cyan (both not tango)
+*color6:  #263b46
+*color14: #487084
 ! LightGrey + White
-*color7:  #6D6D6D
+*color7:  #969696
 *color15: #cccccc
-
 
