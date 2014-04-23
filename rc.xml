@@ -42,7 +42,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>ManjaroFlatDark</name>
+    <name>BeastieDark</name>
     <titleLayout>LIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -153,7 +153,7 @@
      Many programs reserve space automatically, but you can use this in other
      cases. -->
   <margins>
-    <top>0</top>
+    <top>16</top>
     <bottom>0</bottom>
     <left>0</left>
     <right>0</right>
@@ -288,7 +288,7 @@
       </action>
     </keybind>
     <!-- Keybindings for window switching -->
-    <keybind key="A-Tab">
+    <keybind key="W-Tab">
       <action name="NextWindow">
         <allDesktops>yes</allDesktops>
         <finalactions>
@@ -371,6 +371,15 @@
         <height>380</height>
       </action>
     </keybind>
+    <keybind key="W-S-m">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>center</x>
+        <y>center</y>
+        <width>884</width>
+        <height>480</height>
+      </action>
+    </keybind>
     <keybind key="A-m">
       <action name="Move"/>
     </keybind>
@@ -379,90 +388,90 @@
     </keybind>
     <keybind key="W-l">
       <action name="MoveRelative">
-        <x>10</x>
+        <x>25</x>
         <y>0</y>
       </action>
     </keybind>
     <keybind key="W-k">
       <action name="MoveRelative">
         <x>0</x>
-        <y>-10</y>
+        <y>-25</y>
       </action>
     </keybind>
     <keybind key="W-h">
       <action name="MoveRelative">
-        <x>-10</x>
+        <x>-25</x>
         <y>0</y>
       </action>
     </keybind>
     <keybind key="W-j">
       <action name="MoveRelative">
         <x>0</x>
-        <y>10</y>
+        <y>25</y>
       </action>
     </keybind>
     <keybind key="W-S-l">
       <action name="MoveRelative">
-        <x>25</x>
+        <x>7</x>
         <y>0</y>
       </action>
     </keybind>
     <keybind key="W-S-k">
       <action name="MoveRelative">
         <x>0</x>
-        <y>-25</y>
+        <y>-7</y>
       </action>
     </keybind>
     <keybind key="W-S-h">
       <action name="MoveRelative">
-        <x>-25</x>
+        <x>-7</x>
         <y>0</y>
       </action>
     </keybind>
     <keybind key="W-S-j">
       <action name="MoveRelative">
         <x>0</x>
-        <y>25</y>
+        <y>7</y>
       </action>
     </keybind>
     <keybind key="W-C-j">
       <action name="ResizeRelative">
-        <bottom>10</bottom>
+        <bottom>25</bottom>
       </action>
     </keybind>
     <keybind key="W-C-k">
       <action name="ResizeRelative">
-        <bottom>-10</bottom>
+        <bottom>-25</bottom>
       </action>
     </keybind>
     <keybind key="W-C-l">
       <action name="ResizeRelative">
-        <right>10</right>
+        <right>25</right>
       </action>
     </keybind>
     <keybind key="W-C-h">
       <action name="ResizeRelative">
-        <right>-10</right>
+        <right>-25</right>
       </action>
     </keybind>
     <keybind key="W-C-S-j">
       <action name="ResizeRelative">
-        <bottom>25</bottom>
+        <bottom>7</bottom>
       </action>
     </keybind>
     <keybind key="W-C-S-k">
       <action name="ResizeRelative">
-        <bottom>-25</bottom>
+        <bottom>-7</bottom>
       </action>
     </keybind>
     <keybind key="W-C-S-l">
       <action name="ResizeRelative">
-        <right>25</right>
+        <right>7</right>
       </action>
     </keybind>
     <keybind key="W-C-S-h">
       <action name="ResizeRelative">
-        <right>-25</right>
+        <right>-7</right>
       </action>
     </keybind>
     <!-- Keybindings for window switching with the arrow keys -->
@@ -532,18 +541,18 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>Spacefm</name>
+          <name>Pcmanfm</name>
         </startupnotify>
-        <command>spacefm</command>
+        <command>pcmanfm</command>
       </action>
     </keybind>
     <keybind key="W-S-s">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>Spacefm Root</name>
+          <name>pcmanfm Root</name>
         </startupnotify>
-        <command>gksu spacefm</command>
+        <command>gksu pcmanfm</command>
       </action>
     </keybind>
     <keybind key="W-space">
@@ -552,7 +561,7 @@
           <enabled>true</enabled>
           <name>dmenu</name>
         </startupnotify>
-        <command>dmenu_run  -i -nf 'dim gray' -sb 'dark green' -nb 'black'</command>
+        <command>dmenu_run -fn '-*-tamsyn-medium-*-*-*-16-*-*-*-*-*-*-*' -nb '#090909' -nf '#969696' -sb '#4e1111' -sf '#090909'</command>
       </action>
     </keybind>
     <keybind key="W-A-escape">
@@ -627,6 +636,26 @@
         <command>gnome-screenshot</command>
       </action>
     </keybind>
+    <keybind key="XF86AudioPlay">
+      <action name="Execute">
+        <command>audacious -t</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioStop">
+      <action name="Execute">
+        <command>audacious -s</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioPrev">
+      <action name="Execute">
+        <command>audacious -r</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioNext">
+      <action name="Execute">
+        <command>audacious -f</command>
+      </action>
+    </keybind>
     <keybind key="XF86MonBrightnessUp">
       <action name="Execute">
         <command>xbacklight +10</command>
@@ -640,13 +669,13 @@
     <!-- Where installing pulse-audio instead, change 'amixer set' to 'amixer -D pulse set' -->
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
-        <command>amixer set Master 2%+</command>
+        <command>mixer -s vol +2</command>
       </action>
     </keybind>
     <!-- Where installing pulse-audio instead, change 'amixer set' to 'amixer -D pulse set' -->
     <keybind key="XF86AudioLowerVolume">
       <action name="Execute">
-        <command>amixer set Master 2%-</command>
+        <command>mixer -s vol -2</command>
       </action>
     </keybind>
     <!-- Where installing pulse-audio instead, nothing needs to be changed -->
