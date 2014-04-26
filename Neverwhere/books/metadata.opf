@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">37</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">dddc9171-c82a-4017-8532-782b3074029c</dc:identifier>
+        <dc:title>Neverwhere: A Novel</dc:title>
+        <dc:creator opf:file-as="Gaiman, Neil" opf:role="aut">Neil Gaiman</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (0.8.70) [http://calibre-ebook.com]</dc:contributor>
+        <dc:date>2003-08-20T10:00:00+00:00</dc:date>
+        <dc:description>&lt;p class="description"&gt;Richard Mayhew is an unassuming young businessman living in London, with a dull job and a pretty but demanding fiancee. Then one night he stumbles across a girl bleeding on the sidewalk. He stops to help her--and the life he knows vanishes like smoke.&lt;br&gt;Several hours later, the girl is gone too. And by the following morning Richard Mayhew has been erased from his world. His bank cards no longer work, taxi drivers won't stop for him, his hundred rents his apartment out to strangers. He has become invisible, and inexplicably consigned to a London of shadows and darkness a city of monsters and saints, murderers and angels, that exists entirely in a subterranean labyrinth of sewer canals andabandoned subway stations. He has fallen through the cracks of reality and has landed somewhere different, somewhere that is Neverwhere.&lt;br&gt;For this is the home of Door, the mysterious girl whom Richard rescued in the London Above. A personage of great power and nobility in this murky, candlelit realm, she is on a mission to discover the cause of her family's slaughter, and in doing so preserve this strange underworld kingdom from the malevolence that means to destroy it. And with nowhere else to turn, Richard Mayhew must now join the Lady Door's entourage in their determined--and possibly fatal--quest.&lt;br&gt;For the dread journey ever-downward--through bizarre anachronisms and dangerous incongruities, and into dusty corners of stalled time--is Richard's final hope, his last road back to a "real" world that is growing disturbingly less real by the minute.&lt;br&gt;If Tim Burton reimagined The Phantom of the Opera, if Jack Finney let his dark side take over, if you rolled the best work of Clive Barker, Peter Straub and Caleb Carr into one, you still would have something that fell far short of Neil Gaiman's NEVERWHERE. It is a masterful debut novel of darkly hypnotic power, and one of the most absorbing reads to come along in years.&lt;/p&gt;</dc:description>
+        <dc:publisher>HarperCollins</dc:publisher>
+        <dc:identifier opf:scheme="ISBN">9780060557812</dc:identifier>
+        <dc:language>eng</dc:language>
+        <dc:subject>Fantasy</dc:subject>
+        <meta content="{&quot;Neil Gaiman&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="2012-09-29T07:54:41+00:00" name="calibre:timestamp"/>
+        <meta content="Neverwhere: A Novel" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="cover.jpg" type="cover" title="Cover"/>
+    </guide>
+</package>
