@@ -1,23 +1,39 @@
 URxvt*depth: 32
 URxvt*buffered: on
 URxvt*geometry: 75x20
-URxvt*font: -*-tamsyn-medium-*-*-*-15-*-*-*-*-*-*-*
-URxvt*boldItalicFont: -*-tamsyn-medium-*-*-*-15-*-*-*-*-*-*-*
-URxvt*scrollBar: False
-URxvt*saveLines: 1000
-URxvt*pointerBlank: True
+URxvt*font: xft:Fira Mono OT:regular:size=8
+URxvt*boldItalicFont:Fira Mono OT:regular:size=8
+Xft.autohint: 0
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintslight
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
 
+
+!URxvt*font: -*-tamsyn-medium-*-*-*-15-*-*-*-*-*-*-*
+!URxvt*boldItalicFont: -*-tamsyn-medium-*-*-*-15-*-*-*-*-*-*-*
+!URxvt*font:-*-dina-medium-r-*-*-10-*-*-*-*-*-*-*
+!URxvt*boldItalicFont:-*-dina-medium-r-*-*-10-*-*-*-*-*-*-*
+URxvt*scrollBar: False
+URxvt*saveLines: 99999
+URxvt*pointerBlank: True
+URxvt.letterSpace: -1
 URxvt*colorn: #76844A
-URxvt*perl-ext: default,url-select
+URxvt*perl-ext-common: default,url-select,clipboard,matcher
 URxvt.keysym.M-u: perl:url-select:select_next
 URxvt.url-select.launcher: /usr/bin/firefox -new-tab
 URxvt.url-select.underline: true
+URxvt.keysym.M-Escape:perl:keyboard-select:activate
+URxvt.keysym.M-c:     perl:clipboard:copy
+URxvt.keysym.M-v:     perl:clipboard:paste
+URxvt.keysym.M-C-v:   perl:clipboard:paste_escaped
 
 *background: #090909
 *foreground: #969696
 
 ! Black (not tango) + DarkGrey
-*color0:  #030303
+*color0:  #090909
 *color8:  #2d2d2d
 ! DarkRed + Red
 *color1:  #6f2522
