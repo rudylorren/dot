@@ -1,0 +1,10 @@
+"3.8.2 (created: 2014/02/13 23:52:43)
+
+set hintchars=fdsavcxzrewqtgbyhnujmkliop
+set noscrollbars
+set autocomplete=false
+set gui=none
+set gui=tabs
+colors darkmess
+
+" vim: set ft=vimperator:
