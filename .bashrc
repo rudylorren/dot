@@ -193,3 +193,5 @@ compton) vim ~/.config/compton.conf && killall compton && compton -b ;;
 *)	echo "Unknown application: $1" ;;
 esac
 }
+
+PS1="$(if [[ ${EUID} == 0 ]]; then echo '\[\033[01;31m\]\h'; else echo '\[\033[033m\]'; fi)\[\033[33m\] \w \$([[ \$? != 0 ]] && echo \"\[\033[01;31m\]:(\[\033[33m\] \")\\$\[\033[00m\] "
