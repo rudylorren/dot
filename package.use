@@ -1,0 +1,13 @@
+sys-kernel/debian-sources binary
+x11-apps/xinit -minimal
+media-video/vlc minizip
+app-text/calibre qt4 svg webkit
+media-video/ffmpeg threads
+sys-kernel/dracut dm net device-mapper
+app-crypt/gcr gtk
+dev-qt/qtgui gtkstyle
+x11-libs/cairo -qt4
+app-admin/conky mpd
+x11-terms/rxvt-unicode xft 256-color
+dev-lang/python -build
+

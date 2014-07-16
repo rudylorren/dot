@@ -1,10 +1,24 @@
-"3.8.2 (created: 2014/02/13 23:52:43)
-
-set hintchars=fdsavcxzrewqtgbyhnujmkliop
-set noscrollbars
-set autocomplete=false
-set gui=none
-set gui=tabs
 colors darkmess
 
-" vim: set ft=vimperator:
+set autocomplete=true
+set autocomplete maxitems=13
+set hintchars=asdfghjkl;
+set noscrollbars
+set gui=none
+set gui=tabs
+
+map J gT
+map K gt
+
+
+map <silent> <C-F1> :js toggle_bottombar()<CR>
+
+:js << EOF
+function toggle_bottombar() {
+    var bb = document.getElementById('liberator-bottombar');
+    if (!bb)
+        return;
+    bb.style.height = (bb.style.height == '') ? '0px' : '';
+    bb.style.overflow = (bb.style.height == '') ? '' : 'hidden';
+    }
+EOF
